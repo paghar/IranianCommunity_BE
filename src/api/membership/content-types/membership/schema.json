@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "memberships",
+  "info": {
+    "singularName": "membership",
+    "pluralName": "memberships",
+    "displayName": "Membership"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "birthday": {
+      "type": "date",
+      "required": true
+    },
+    "job": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "postalCode": {
+      "type": "biginteger",
+      "required": true
+    },
+    "telephone": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "reason": {
+      "type": "text"
+    },
+    "condition": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    }
+  }
+}

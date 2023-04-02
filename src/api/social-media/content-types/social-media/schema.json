@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "social_medias",
+  "info": {
+    "singularName": "social-media",
+    "pluralName": "social-medias",
+    "displayName": "Social-media"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "member": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::member.member",
+      "inversedBy": "contacts"
+    }
+  }
+}

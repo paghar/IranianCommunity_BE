@@ -4,7 +4,8 @@
   "info": {
     "singularName": "member",
     "pluralName": "members",
-    "displayName": "Member"
+    "displayName": "Member",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -15,7 +16,7 @@
       "type": "string",
       "required": true
     },
-    "position": {
+    "role": {
       "type": "string",
       "required": true
     },
@@ -24,14 +25,21 @@
       "required": true
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "contacts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::social-media.social-media",
+      "mappedBy": "member"
     }
   }
 }
