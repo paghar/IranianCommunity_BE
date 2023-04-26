@@ -4,7 +4,8 @@
   "info": {
     "singularName": "gallery",
     "pluralName": "galleries",
-    "displayName": "gallery"
+    "displayName": "gallery",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,26 +17,36 @@
   },
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
     },
     "plan": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::plan.plan",
       "inversedBy": "galleries"
+    },
+    "banner": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
