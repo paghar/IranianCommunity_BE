@@ -47,6 +47,26 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "width": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "biginteger",
+      "required": true,
+      "default": "1080"
+    },
+    "height": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "biginteger",
+      "default": "720",
+      "required": true
     }
   }
 }
