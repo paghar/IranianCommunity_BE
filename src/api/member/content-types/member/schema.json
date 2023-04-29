@@ -35,7 +35,7 @@
         "audios"
       ]
     },
-    "contacts": {
+    "socials": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::social-media.social-media",

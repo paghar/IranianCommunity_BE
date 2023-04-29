@@ -4,7 +4,8 @@
   "info": {
     "singularName": "plan",
     "pluralName": "plans",
-    "displayName": "Plan"
+    "displayName": "Plan",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -43,20 +44,20 @@
       "required": true
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
     },
     "type": {
       "pluginOptions": {

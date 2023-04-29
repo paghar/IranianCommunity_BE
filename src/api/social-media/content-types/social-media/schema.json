@@ -4,7 +4,8 @@
   "info": {
     "singularName": "social-media",
     "pluralName": "social-medias",
-    "displayName": "Social-media"
+    "displayName": "Social-media",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -23,7 +24,11 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::member.member",
-      "inversedBy": "contacts"
+      "inversedBy": "socials"
+    },
+    "icon": {
+      "type": "string",
+      "required": true
     }
   }
 }
