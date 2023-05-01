@@ -4,19 +4,16 @@
   "info": {
     "singularName": "membership",
     "pluralName": "memberships",
-    "displayName": "Membership"
+    "displayName": "Membership",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "firstName": {
       "type": "string",
-      "required": true
-    },
-    "birthday": {
-      "type": "date",
       "required": true
     },
     "job": {
@@ -42,12 +39,11 @@
     "reason": {
       "type": "text"
     },
-    "condition": {
-      "type": "text"
+    "birthday": {
+      "type": "string"
     },
-    "date": {
-      "type": "date",
-      "required": true
+    "lastName": {
+      "type": "string"
     }
   }
 }
