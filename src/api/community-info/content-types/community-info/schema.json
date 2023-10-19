@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "community_infos",
+  "info": {
+    "singularName": "community-info",
+    "pluralName": "community-infos",
+    "displayName": "CommunityInfo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "required": true
+    },
+    "type": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "about-title",
+        "about-tab",
+        "contact"
+      ],
+      "default": "about-title",
+      "required": true
+    }
+  }
+}
