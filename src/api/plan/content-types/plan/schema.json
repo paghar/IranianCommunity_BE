@@ -87,6 +87,12 @@
       "relation": "oneToMany",
       "target": "api::gallery.gallery",
       "mappedBy": "plan"
+    },
+    "nested_plans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nested-plan.nested-plan",
+      "mappedBy": "plan"
     }
   }
 }
