@@ -921,6 +921,45 @@ export interface ApiMessageMessage extends Schema.CollectionType {
   };
 }
 
+export interface ApiNestedPlanNestedPlan extends Schema.CollectionType {
+  collectionName: 'nested_plans';
+  info: {
+    singularName: 'nested-plan';
+    pluralName: 'nested-plans';
+    displayName: 'NestedPlan';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    audio: Attribute.Media & Attribute.Required;
+    subTitle: Attribute.String;
+    description: Attribute.RichText & Attribute.Required;
+    plan: Attribute.Relation<
+      'api::nested-plan.nested-plan',
+      'manyToOne',
+      'api::plan.plan'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::nested-plan.nested-plan',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::nested-plan.nested-plan',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPlanPlan extends Schema.CollectionType {
   collectionName: 'plans';
   info: {
@@ -984,6 +1023,11 @@ export interface ApiPlanPlan extends Schema.CollectionType {
       'api::plan.plan',
       'oneToMany',
       'api::gallery.gallery'
+    >;
+    nested_plans: Attribute.Relation<
+      'api::plan.plan',
+      'oneToMany',
+      'api::nested-plan.nested-plan'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1058,6 +1102,7 @@ declare module '@strapi/types' {
       'api::member.member': ApiMemberMember;
       'api::membership.membership': ApiMembershipMembership;
       'api::message.message': ApiMessageMessage;
+      'api::nested-plan.nested-plan': ApiNestedPlanNestedPlan;
       'api::plan.plan': ApiPlanPlan;
       'api::social-media.social-media': ApiSocialMediaSocialMedia;
     }
