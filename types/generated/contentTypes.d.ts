@@ -683,9 +683,10 @@ export interface ApiCommunityInfoCommunityInfo extends Schema.CollectionType {
     singularName: 'community-info';
     pluralName: 'community-infos';
     displayName: 'CommunityInfo';
+    description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -706,7 +707,9 @@ export interface ApiCommunityInfoCommunityInfo extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    type: Attribute.Enumeration<['about-title', 'about-tab', 'contact']> &
+    type: Attribute.Enumeration<
+      ['about-title', 'about-tab', 'contact', 'image-banner', 'image-logo']
+    > &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -714,9 +717,14 @@ export interface ApiCommunityInfoCommunityInfo extends Schema.CollectionType {
         };
       }> &
       Attribute.DefaultTo<'about-title'>;
+    image: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::community-info.community-info',
       'oneToOne',
@@ -825,11 +833,39 @@ export interface ApiMemberMember extends Schema.CollectionType {
   options: {
     draftAndPublish: false;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    name: Attribute.String & Attribute.Required;
-    role: Attribute.String & Attribute.Required;
-    description: Attribute.Text & Attribute.Required;
-    image: Attribute.Media;
+    name: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    role: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    image: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     socials: Attribute.Relation<
       'api::member.member',
       'oneToMany',
@@ -849,6 +885,12 @@ export interface ApiMemberMember extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::member.member',
+      'oneToMany',
+      'api::member.member'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -930,13 +972,41 @@ export interface ApiNestedPlanNestedPlan extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    audio: Attribute.Media & Attribute.Required;
-    subTitle: Attribute.String;
-    description: Attribute.RichText & Attribute.Required;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    audio: Attribute.Media &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    subTitle: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     plan: Attribute.Relation<
       'api::nested-plan.nested-plan',
       'manyToOne',
@@ -944,7 +1014,6 @@ export interface ApiNestedPlanNestedPlan extends Schema.CollectionType {
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::nested-plan.nested-plan',
       'oneToOne',
@@ -957,6 +1026,12 @@ export interface ApiNestedPlanNestedPlan extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::nested-plan.nested-plan',
+      'oneToMany',
+      'api::nested-plan.nested-plan'
+    >;
+    locale: Attribute.String;
   };
 }
 
