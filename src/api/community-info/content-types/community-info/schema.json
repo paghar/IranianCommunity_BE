@@ -4,10 +4,11 @@
   "info": {
     "singularName": "community-info",
     "pluralName": "community-infos",
-    "displayName": "CommunityInfo"
+    "displayName": "CommunityInfo",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {
     "i18n": {
@@ -42,10 +43,27 @@
       "enum": [
         "about-title",
         "about-tab",
-        "contact"
+        "contact",
+        "image-banner",
+        "image-logo"
       ],
       "default": "about-title",
       "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
