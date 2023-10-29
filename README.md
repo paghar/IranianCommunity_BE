@@ -1,6 +1,14 @@
-# 🚀 Getting started with Strapi
+# Dynamic LandingPage APP For NAR-ANON Association and Subgroup Forums.
+ 
+## Demo
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+[Iran Det Anan Association(DT-ANAN)](https://irdebtanon.ir/en)
+
+## Tech Stack
+
+**Client:** React, Next.js, TailwindCSS
+
+**Server:** Stapi
 
 ### `develop`
 
@@ -32,26 +40,35 @@ npm run build
 yarn build
 ```
 
-## ⚙️ Deployment
+## Features
 
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
+- Using [NextJS Image](https://nextjs.org/docs/api-reference/next/image) for Image Optimization
+- Slider using [React Slick](https://react-slick.neostack.com/docs/api)
+- Smooth Scrolling and Active menu using [React Scroll](https://www.npmjs.com/package/react-scroll)
 
-## 📚 Learn more
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+## Contributing
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+Contributions are always welcome!
 
-## ✨ Community
+See `contributing.md` for ways to get started.
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+Please adhere to this project's `code of conduct`.
 
----
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## Bugs and Issues
+
+Have a bug or an issue with this template? [Open a new issue](https://github.com/naufaldi/next-landing-vpn/issues/new) here on GitHub.
+
+
+## Template
+
+[Using Tailwind VPN Landingpage](https://next-landing-vpn.vercel.app/) - Free Landingpage Template Apps
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+
